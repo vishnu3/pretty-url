@@ -1,0 +1,43 @@
+Steps to create Docker Image
+
+#Step-1
+Create Docker file for project
+
+#Step-2
+Open the terminal window to run below docker command.
+
+better to got to root directory of project and open terminal.
+As path will be pointed to root directory,
+so no manual action needed for giving, project path while running command.
+
+
+#Step-2
+run below command to create docker image of project jar.
+
+docker build -f <Docker file name> -t <image name> .
+
+eg.
+root-directory>docker build -f Dockerfile -t pretty-url-app .
+
+Example:
+>docker build -f Dockerfile -t pretty-url-app .
+
+
+#Step-3
+verify docker image by below command
+
+>docker images
+
+#Step-7
+Run docker image
+
+docker run -p 8088:8088 pretty-url-app
+
+eg,
+project-root>docker run -p 8080:8080 pretty-url-app
+
+
+
+
+
+

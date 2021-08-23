@@ -18,11 +18,11 @@ import java.util.Map;
 @AllArgsConstructor
 public class LookUpServiceImpl implements LookUpService {
 
-    private final CachePrettyUrlMap cachePrettyUrlMap;
+    private final CachePrettyUrlMap dataCacheMap;
 
     @Override
     public Map<String, String> createUrl(List<String> urls, UrlType urlType) {
-        return urlType.generate(urls, cachePrettyUrlMap);
+        return urlType.generate(urls, dataCacheMap);
     }
 
 }
